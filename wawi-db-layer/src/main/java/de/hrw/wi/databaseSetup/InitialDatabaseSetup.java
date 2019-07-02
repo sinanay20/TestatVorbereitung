@@ -67,6 +67,10 @@ public class InitialDatabaseSetup {
         c.createStatement().executeQuery("INSERT INTO STOCK VALUES (1,2,'0636926062442',5)");
 
         c.createStatement().executeQuery(
+                "CREATE TABLE HAFT (customerID INTEGER PRIMARY KEY, firstName VARCHAR(255), lastName VARCHAR(255), street VARCHAR(255),"
+                        + " houseNr INTEGER, city VARCHAR(255), country VARCHAR(255), postalCode INTEGER, yearOfBirth INTEGER, gender VARCHAR(1), sales INTEGER, eMail VARCHAR(255), phoneNumber VARCHAR(255))");
+
+        c.createStatement().executeQuery(
                 "INSERT INTO CUSTOMER VALUES (1001,'Sinan','Ayten','Ebenstrasse',22,'Nürtingen','Deutschland',72622,1995,'M',222,'ebengami@gmx.net','01767262222')");
         c.createStatement().executeQuery(
                 "INSERT INTO CUSTOMER VALUES (1002,'Alexander','Böhm','Ravensburgerstrasse',69,'Ravensburg','Deutschland',82622,1994,'M',11007,'alex.böhm@gmx.net','0176123456')");
@@ -77,7 +81,7 @@ public class InitialDatabaseSetup {
         c.createStatement().executeQuery(
                 "INSERT INTO CUSTOMER VALUES (1005,'Denis','Rammstein','Im Höfle',11,'Bad Waldsee','Deutschland',88251,1995,'M',69,'dramm@gmx.de','016260982')");
         c.createStatement().executeQuery(
-                "INSERT INTO CUSTOMER VALUES (1006,'Laura','Mond','Jordery Platz',56,'Trauben','Österreich',88250,1998,'W',29,'laura.mond@web.de','0172967215')");
+                "INSERT INTO CUSTOMER VALUES (1006,'Rammstein','Mond','Jordery Platz',56,'Trauben','Österreich',88250,1998,'W',29,'laura.mond@web.de','0172967215')");
 
         c.createStatement().executeQuery(
                 "CREATE TABLE ORDERS (ordernumber INTEGER, customerID INTEGER, articleCode varchar(13), orderDate varchar(12), amount INTEGER, price double, priceTotal double,"
